@@ -88,7 +88,7 @@ public class Program {
                     System.out.println("Введите номер животного, которого приласкаем:");
                     ArrayList<Animal> pets = littleZoo.getAllPets();
                     choice = mainMenu.userChoice();
-                    if (choice < petsCount && choice > 0) {
+                    if (choice <= petsCount && choice > 0) {
                         Animal petToSnuggle = pets.get(choice - 1);
                         ((Snuggle) petToSnuggle).snuggle();
                     }
@@ -100,7 +100,7 @@ public class Program {
                     System.out.println("Введите номер собаки, которую будем дрессировать:");
                     ArrayList<Animal> dogs = littleZoo.getAllDogs();
                     choice = mainMenu.userChoice();
-                    if (choice < dogsCount && choice > 0) {
+                    if (choice <= dogsCount && choice > 0) {
                         Animal dogToTraining = dogs.get(choice - 1);
                         ((Training) dogToTraining).training();
                     }
